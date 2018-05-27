@@ -1,10 +1,8 @@
 package  principal;
 
 import modelos.Aluno;
-import util.Util;
+import org.jspy.core.functools.Util;
 
-import java.lang.reflect.Field;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -17,7 +15,7 @@ public class Main {
         aluno.setMatricula(123L);
         aluno.setNome("João");
 
-        Map<String, Object> vars = util.var(aluno);
+        Map<String, Object> vars = util.vars(aluno);
 
         vars.forEach((String chave, Object valor) -> {
             System.out.println(chave + ": " + valor);
